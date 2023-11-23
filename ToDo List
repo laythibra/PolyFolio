@@ -4,3 +4,63 @@ Un site avec :
 - page de connexion
 - page d'inscription
 - 
+
+
+
+
+
+
+
+Phase de Planification :
+Définir les Objectifs :
+
+Clarifier les objectifs du portfolio (montrer des compétences spécifiques, projets antérieurs, etc.).
+Identifier le public cible.
+Recherche et Inspiration :
+
+Examiner d'autres portfolios en ligne pour l'inspiration.
+Identifier les fonctionnalités que vous souhaitez inclure.
+Créer une Structure de Portfolio :
+
+Déterminer les sections nécessaires (Accueil, À propos, Compétences, Projets, Contact, etc.).
+Créer une maquette de la structure du site.
+Phase de Conception :
+Conception de l'Interface Utilisateur (UI) :
+
+Créer un design propre et professionnel.
+Choisir une palette de couleurs adaptée.
+Créer des Wireframes :
+
+Ébaucher des versions simplifiées de chaque page pour visualiser la disposition.
+Phase de Développement :
+Mise en Place de l'Environnement de Développement :
+
+Installer les outils nécessaires (Angular CLI, éditeur de texte, etc.).
+Configurer un serveur local pour le développement.
+Création de la Structure HTML :
+
+Développer le squelette HTML de chaque page.
+Intégration d'Angular :
+
+Configurer un projet Angular.
+Créer des composants pour chaque section du portfolio.
+Développement des Fonctionnalités Dynamiques :
+
+Intégrer des animations ou transitions.
+Ajouter des fonctionnalités interactives avec Angular.
+Intégration de Java (Backend) :
+
+Configurer un backend Java pour gérer les formulaires de contact, le stockage des données, etc.
+Phase de Test :
+Tests Unitaires et Intégration :
+
+Tester chaque composant individuellement.
+Tester l'intégration de tous les composants.
+Tests de Compatibilité et de Performance :
+
+Tester le site sur différents navigateurs.
+Vérifier la performance du site, en particulier le temps de chargement.
+Phase de Déploiement :
+Hébergement :
+
+Choisir une plateforme d'hébergement (Netlify, Vercel, AWS, etc.).

@@ -1,23 +1,61 @@
-<header class="mb-auto">
-  <div>
-    <h3 class="float-md-start mb-0">PolyFolio</h3>
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-      <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#"
-        >Home</a
-      >
-      <a class="nav-link fw-bold py-1 px-0" href="#">About</a>
-      <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-      <button
-        type="button"
-        class="btn btn-outline-light me-2"
-        style="margin-left: 1rem"
-        (click)="goToLogin()"
-      >
-        {{ loginButtonText }}
-      </button>
-      <button type="button" class="btn btn-warning">
-        {{ signUpButtonText }}
-      </button>
-    </nav>
-  </div>
+<header class="navbar navbar-expand-lg navbar-dark fixed-top nga-navbar">
+  <nav class="container" aria-label="Main navigation">
+    <a routerLink="/" class="navbar-brand" alt="Accueil">
+      <i class="fa-brands fa-pixiv" style="font-size: 30px">olyFolio</i>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    ></button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link nga-nav-link" aria-current="page" routerLink="/">
+            <i class="fa-solid fa-house me-1"></i>Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nga-nav-link"
+            aria-current="page"
+            routerLink="/about"
+          >
+            <i class="far fa-question-circle me-1"></i>About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nga-nav-link"
+            aria-current="page"
+            routerLink="/contact"
+          >
+            <i class="fas fa-envelope me-1"></i>Contact</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button
+          *ngIf="loginButtonText.trim() !== ''"
+          type="button"
+          class="btn btn-sm nga-btn-navbar me-2"
+          routerLink="/signup"
+        >
+          <i class="fas fa-user-plus me-2"></i>{{ signUpButtonText }}
+        </button>
+        <button
+          *ngIf="loginButtonText.trim() !== ''"
+          type="button"
+          class="btn btn-sm btn-outline-light me-2"
+          routerLink="/login"
+        >
+          <i class="fas fa-sign-in-alt me-2"></i>{{ loginButtonText }}
+        </button>
+      </form>
+    </div>
+  </nav>
 </header>

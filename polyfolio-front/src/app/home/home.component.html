@@ -1,72 +1,142 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="auto">
-  <head>
-    <script src="../assets/js/color-modes.js"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Hugo 0.118.2" />
-    <title>Cover Template · Bootstrap v5.3</title>
+<app-header
+  [loginButtonText]="SeConnecter"
+  [signUpButtonText]="Sinscrire"
+></app-header>
 
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.3/examples/cover/"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
-    />
+<router-outlet></router-outlet>
+<div class="mt-5 text-white mx-auto text-center">
+  <h1 style="font-weight: bold">
+    Créer un
+    <span style="color: #10bcec">portfolio d'exception professionnel</span>
+    gratuitement
+  </h1>
 
-    <link
-      href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Custom styles for this template -->
-    <link href="home.component.css" rel="stylesheet" />
-  </head>
-  <body
-    class="d-flex h-100 text-center text-white"
-    style="background-color: #212529"
+  <p>
+    Mettez en avant vos compétences et votre expérience avec un portfolio en
+    ligne. PolyFolio <br />vous offre les outils pour créer un portfolio qui
+    reflète qui vous êtes vraiment.
+  </p>
+  <button
+    class="btn btn-nga btn-nga-primary mb-4"
+    style="font-weight: bold"
+    routerLink="/login"
+    type="submit"
   >
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <app-header
-        [loginButtonText]="SeConnecter"
-        [signUpButtonText]="Sinscrire"
-      ></app-header>
+    Créer maintenant
+  </button>
+</div>
 
-      <div class="container my-5">
-        <div
-          class="text-center text-muted text-bg-dark border border-dashed rounded-5"
-        >
-          <i
-            class="fa-solid fa-circle-info"
-            style="color: white; font-size: 75px; margin-top: 15px"
-          ></i>
-          <h1 class="text-white">PolyFolio</h1>
-          <p class="col-lg-6 mx-auto mb-4 text-white">
-            Bienvenue sur PolyFolio, la plateforme dédiée aux ingénieurs. Créez
-            votre portfolio en ligne pour mettre en valeur vos expériences,
-            projets et compétences. Partagez votre profil facilement avec vos
-            contacts professionnels et ouvrez-vous à de nouvelles opportunités.
-            Rejoignez notre communauté dès aujourd'hui et propulsez votre
-            carrière à de nouveaux sommets !
-          </p>
-          <a
-            class="btn btn-primary px-5 mb-5"
-            type="button"
-            routerLink="/login"
+<div class="py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="225"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: Thumbnail"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
           >
-            Exemples
-          </a>
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+          </svg>
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="225"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: Thumbnail"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+          </svg>
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="225"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: Thumbnail"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+          </svg>
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <router-outlet></router-outlet>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+  </div>
+</div>

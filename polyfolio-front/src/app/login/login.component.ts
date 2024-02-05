@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet} from '@angular/router';
 import { HeaderModule } from '../header/header.module';
+import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css',
+  imports:[RouterOutlet, RouterModule, HeaderModule], 
   standalone: true,
-  imports: [RouterOutlet, RouterModule, HeaderModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
 })
-export class HomeComponent {
-  title = 'polyfolio-front';
+export class LoginComponent {
   SeConnecter: string = "Login"; // Définir les valeurs des boutons
   Sinscrire: string = "Sign up"; //
 }
+
+  

@@ -1,14 +1,17 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
-export const routeConfig: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: HomeComponent
 },
-  {
-        path: 'login',
-        component: LoginComponent
-    }
+    {path: 'login',
+    loadChildren: () => import('./login/login.module')
+      .then(mod => mod.LoginModule)
+  },
+  {path: 'signup',
+    loadChildren: () => import('./signup/signup.module')
+      .then(mod => mod.SignupModule)
+  }
 ];

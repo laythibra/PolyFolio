@@ -13,5 +13,13 @@ export const routes: Routes = [
   {path: 'signup',
     loadChildren: () => import('./signup/signup.module')
       .then(mod => mod.SignupModule)
+  },
+  {path: 'portfolio',
+    loadChildren: () => import('./portfolio/portfolio.module')
+      .then(mod => mod.PorfolioModule)
+  },
+  {path: 'about',
+    loadChildren: () => import('./about/about.module')
+      .then(mod => mod.AboutModule)
   }
 ];

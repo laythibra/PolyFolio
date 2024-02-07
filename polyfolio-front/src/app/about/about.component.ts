@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import { HeaderModule } from '../header/header.module';
 import { RouterOutlet } from '@angular/router';
-import { RouterModule } from '@angular/router';
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
-  imports:[RouterOutlet, RouterModule, HeaderModule], 
+  selector: 'app-about',
   standalone: true,
+  imports: [HeaderModule,RouterOutlet],
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.css'
 })
-export class LoginComponent {
+export class AboutComponent {
   SeConnecter: string = "Login"; // Définir les valeurs des boutons
   Sinscrire: string = "Sign up"; 
 }
-
-  

@@ -8,4 +8,5 @@ import { Component,Input } from '@angular/core';
 export class HeaderComponent {
   @Input() loginButtonText: string ="";
   @Input() signUpButtonText: string="";
+  @Input() showDropdown: boolean = false;
 }

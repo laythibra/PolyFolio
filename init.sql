@@ -16,5 +16,9 @@ id SERIAL PRIMARY KEY,
 public boolean DEFAULT false,
 user_id integer,
 titre varchar(32),
-contenu varchar(32)
+contenu varchar(32), 
+fromation varchar(32), 
+experience varchar(32), 
+langue varchar(32), 
+projet varchar(32)
 );

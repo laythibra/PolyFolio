@@ -22,7 +22,11 @@ export class PortfolioComponent {
 
     titre: new FormControl(''),
     contenu: new FormControl(''),
-    public: new FormControl('')
+    public: new FormControl(true),
+    formation: new FormControl(''),
+    experience: new FormControl(''),
+    projet: new FormControl(''),
+    langue: new FormControl(''),
 
   });
 
@@ -54,7 +58,11 @@ export class PortfolioComponent {
         this.portfolioForm.setValue({
           titre: data.titre,
           contenu: data.contenu,
-          public: data.public
+          public: data.public,
+          formation: data.formation,
+          experience: data.experience,
+          projet: data.projet,
+          langue: data.langue
         });
       })
       .catch((error) => {
@@ -76,7 +84,11 @@ export class PortfolioComponent {
       body: JSON.stringify({
         titre: this.portfolioForm.value.titre,
         contenu: this.portfolioForm.value.contenu,
-        public: this.portfolioForm.value.public,
+        public: true,
+        formation: this.portfolioForm.value.formation,
+        experience: this.portfolioForm.value.experience,
+        projet: this.portfolioForm.value.projet,
+        langue: this.portfolioForm.value.langue,
 
       }),
     })

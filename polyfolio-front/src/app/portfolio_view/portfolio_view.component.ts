@@ -20,6 +20,10 @@ export class PortfolioViewComponent {
 
   titre: String = ""
   contenu: String = ""
+  formation: String = ""
+  experience: String = ""
+  langue: String = ""
+  projet: String = ""
 
 
 
@@ -49,7 +53,11 @@ export class PortfolioViewComponent {
       })
       .then((data) => {
         this.titre = data.titre,
-        this.contenu = data.contenu
+        this.contenu = data.contenu,
+        this.formation = data.formation,
+        this.projet = data.projet,
+        this.langue = data.langue,
+        this.experience = data.experience
       })
       .catch((error) => {
         console.error('Error:', error);

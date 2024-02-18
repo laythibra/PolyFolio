@@ -61,4 +61,25 @@ export class HomeComponent {
         console.error('Error:', error);
       });
   }
+
+  supprimerPortfolio(id: number) {
+    fetch(`http://localhost:3000/portfolio/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem('token') || '',
+      },
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          // Suppression réussie, mettre à jour la liste des portfolios
+          this.portfolios = this.portfolios.filter((portfolio: any) => portfolio.id !== id);
+        } else {
+          throw new Error('Erreur lors de la suppression du portfolio');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
 }

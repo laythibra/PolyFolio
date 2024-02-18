@@ -3,79 +3,47 @@
     <a routerLink="/" class="navbar-brand" alt="Accueil">
       <i class="fa-brands fa-pixiv" style="font-size: 30px">olyFolio</i>
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarCollapse"
-      aria-controls="navbarCollapse"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    ></button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
           <a class="nav-link nga-nav-link" aria-current="page" routerLink="/">
-            <i class="fa-solid fa-house me-1"></i>Home</a
-          >
+            <i class="fa-solid fa-house me-1"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link nga-nav-link"
-            aria-current="page"
-            routerLink="/about"
-          >
-            <i class="far fa-question-circle me-1"></i>About</a
-          >
+          <a class="nav-link nga-nav-link" aria-current="page" routerLink="/about">
+            <i class="far fa-question-circle me-1"></i>About</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link nga-nav-link"
-            aria-current="page"
-            routerLink="/contact"
-          >
-            <i class="fas fa-envelope me-1"></i>Contact</a
-          >
+          <a class="nav-link nga-nav-link" aria-current="page" routerLink="/contact">
+            <i class="fas fa-envelope me-1"></i>Contact</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <button
-          *ngIf="loginButtonText.trim() !== ''"
-          type="button"
-          class="btn btn-sm nga-btn-navbar me-2"
-          routerLink="/signup"
-        >
-          <i class="fas fa-user-plus me-2"></i>{{ signUpButtonText }}
-        </button>
-        <button
-          *ngIf="loginButtonText.trim() !== ''"
-          type="button"
-          class="btn btn-sm btn-outline-light me-2"
-          routerLink="/login"
-        >
-          <i class="fas fa-sign-in-alt me-2"></i>{{ loginButtonText }}
-        </button>
-      </form>
-      <div class="dropdown text-end" *ngIf="showDropdown">
-        <a
-          href="#"
-          class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img
-            src="https://github.com/mdo.png"
-            alt="mdo"
-            width="32"
-            height="32"
-            class="rounded-circle"
-          />
+      <ng-template #elseBlock>
+        <form class="d-flex">
+          <button *ngIf="loginButtonText.trim() !== ''" type="button" class="btn btn-sm nga-btn-navbar me-2"
+            routerLink="/signup">
+            <i class="fas fa-user-plus me-2"></i>{{ signUpButtonText }}
+          </button>
+          <button *ngIf="loginButtonText.trim() !== ''" type="button" class="btn btn-sm btn-outline-light me-2"
+            routerLink="/login">
+            <i class="fas fa-sign-in-alt me-2"></i>{{ loginButtonText }}
+          </button>
+        </form>
+      </ng-template>
+      <div class="dropdown text-end" *ngIf="showDropdown; else elseBlock">
+        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle" />
         </a>
         <ul class="dropdown-menu text-small">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="/portfolio">Mes portfolios</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="#">Sign out</a></li>
+          <!-- <li><a class="dropdown-item" href="#">Profile</a></li> -->
+          <li><a class="dropdown-item" href="/">Mes portfolios</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><button class="dropdown-item" (click)="logout()">Sign out</button></li>
         </ul>
       </div>
     </div>

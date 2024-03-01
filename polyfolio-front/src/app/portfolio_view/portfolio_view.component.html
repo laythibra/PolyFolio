@@ -1,0 +1,78 @@
+<router-outlet></router-outlet>
+<app-header></app-header>
+
+<!-- Font Awesome CSS -->
+
+<!-- Custom CSS -->
+<style>
+  /* Ajoutez vos styles personnalisés ici */
+  /* Par exemple : */
+  .container {
+    background-color: #212529; /* Couleur de fond modifiée */
+    color: #fff; /* Couleur de texte blanche pour un contraste */
+  }
+  .section-title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .section-content {
+    margin-bottom: 50px;
+  }
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+</style>
+
+<div class="container">
+  <!-- En-tête -->
+  <header class="text-center my-4">
+    <h1>{{ titre }}</h1>
+  </header>
+
+  <!-- Présentation professionnelle -->
+  <section class="section-content">
+    <h2 class="section-title">
+      <i class="fas fa-user icon"></i>Présentation professionnelle
+    </h2>
+    <h4>{{ contenu }}</h4>
+  </section>
+
+  <!-- Formation -->
+  <section class="section-content">
+    <h2 class="section-title">
+      <i class="fas fa-graduation-cap icon"></i>Formation
+    </h2>
+    <h4>{{ formation }}</h4>
+  </section>
+
+  <!-- Expérience -->
+  <section class="section-content">
+    <h2 class="section-title">
+      <i class="fas fa-briefcase icon"></i>Expérience
+    </h2>
+    <h4>{{ experience }}</h4>
+  </section>
+
+  <!-- Projets -->
+  <section class="section-content">
+    <h2 class="section-title">
+      <i class="fas fa-project-diagram icon"></i>Projets
+    </h2>
+    <h4>{{ projet }}</h4>
+  </section>
+
+  <!-- Langues -->
+  <section class="section-content">
+    <h2 class="section-title"><i class="fas fa-language icon"></i>Langues</h2>
+    <h4>{{ langue }}</h4>
+  </section>
+
+  <!-- Autres sections -->
+  <!-- Ajoutez d'autres sections selon vos besoins -->
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

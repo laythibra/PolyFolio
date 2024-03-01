@@ -1,8 +1,5 @@
 <router-outlet></router-outlet>
-<app-header
-  [loginButtonText]="SeConnecter"
-  [signUpButtonText]="Sinscrire"
-></app-header>
+<app-header [loginButtonText]="SeConnecter" [signUpButtonText]="Sinscrire"></app-header>
 <div class="container-fluid mb-5">
   <div class="row mb-5">
     <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-5">
@@ -11,44 +8,30 @@
           <i class="fas fa-sign-in-alt me-4"></i><strong>Se connecter</strong>
         </h1>
         <div class="card-body px-lg-5 pt-4">
-          <form>
+
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
             <div class="form-row">
               <div class="col">
                 <div class="md-form mb-2">
                   <div class="form-floating">
-                    <input
-                      type="email"
-                      class="form-control form-control-sm"
-                      formControlName="email"
-                      id="email"
-                      placeholder=""
-                    />
+                    <input type="email" class="form-control form-control-sm" formControlName="email" id="email"
+                      placeholder="" />
                     <label for="floatingInput">Email</label>
                   </div>
                 </div>
                 <div class="md-form">
                   <div class="form-floating">
-                    <input
-                      type="password"
-                      class="form-control form-control-sm"
-                      formControlName="password"
-                      id="password"
-                      placeholder=""
-                    />
+                    <input type="password" class="form-control form-control-sm" formControlName="password" id="password"
+                      placeholder="" />
                     <label for="floatingInput">Mot de passe</label>
                   </div>
                 </div>
                 <div class="d-flex justify-content-around">
                   <div class="pb-4">
-                    <a class="login" href="/login-reset"
-                      >Mot de passe oublié ?</a
-                    >
+                    <a class="login" href="/login-reset">Mot de passe oublié ?</a>
                   </div>
                 </div>
-                <button
-                  class="w-100 btn btn-nga btn-nga-primary mb-4"
-                  type="submit"
-                >
+                <button class="w-100 btn btn-nga btn-nga-primary mb-4" type="submit">
                   Se connecter<i class="fas fa-sign-in-alt ms-4"></i>
                 </button>
                 <p class="text-center">

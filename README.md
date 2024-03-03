@@ -1,11 +1,11 @@
 # PolyFolio - Révolutionnez votre présence professionnelle en ligne
 ## Contexte du Projet
 
-Ce projet a été développé dans le cadre de notre 5ème année à Polytech Angers. En tant qu'étudiants passionnés par le développement web et les technologies associées, nous avons entrepris la création de PolyFolio, un site web de portfolio novateur.
+Ce projet a été développé dans le cadre de notre 5ème année à Polytech Angers. Nous avons donc entrepris la création de PolyFolio, un site web de portfolio novateur.
 
 ### Objectif du Projet
 
-L'objectif principal était d'appliquer les connaissances acquises tout au long de notre parcours universitaire en intégrant les différentes notions enseignées dans le cadre de notre cours. PolyFolio représente un effort collectif visant à concrétiser nos compétences en matière de développement, de conception et de gestion de projet.
+L'objectif principal était d'appliquer les connaissances acquises tout au long de notre parcours universitaire en intégrant les différentes notions enseignées dans le cadre de notre cours. 
 
 ## Description du Projet
 

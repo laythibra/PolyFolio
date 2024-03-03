@@ -1,7 +1,8 @@
 # PolyFolio - Révolutionnez votre présence professionnelle en ligne
 ## Contexte du Projet
 
-Ce projet a été développé dans le cadre de notre 5ème année à Polytech Angers. Nous avons donc entrepris la création de PolyFolio, un site web de portfolio novateur.
+Ce projet a été développé dans le cadre de notre 5ème année à Polytech Angers. Nous avons donc entrepris la création de PolyFolio, un site web de portfolio novateur. Vous trouverez une vidéo explicative du projet sur youtube qui résume les fonctionnalités : 
+https://youtu.be/HzVX8qgXtXM
 
 ### Utilisation de GitHub
 

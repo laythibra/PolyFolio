@@ -42,10 +42,10 @@ Tandis que le reste des fonctionnalités a été partagé et développé collabo
 
 
 ## Technologies Utilisées
-
+L'authentification est réalisée à l'aide de tokens JWT sécurisés via BCRYPT.
 - **Frontend:** Angular
-- **Backend:** Node, JS
-- **Base de Données:** PostgreSQL
+- **Backend:** NodeJs, Express
+- **Base de Données:** PostgreSQL -> hébergé localement grace à une image docker. Administré avec PgAdmin à la racine du projet.
 - **Autres Outils:** Docker
 
 # PolyFolio

@@ -3,9 +3,15 @@
 
 Ce projet a été développé dans le cadre de notre 5ème année à Polytech Angers. Nous avons donc entrepris la création de PolyFolio, un site web de portfolio novateur.
 
+### Utilisation de GitHub
+
+Il est important de noter que nous n'avons pas utilisé GitHub de manière conventionnelle dans le cadre de ce projet. Au lieu de cela, nous avons opté pour la collaboration en temps réel via Live Share. C'est pourquoi Layth est identifié comme le seul contributeur principal dans l'historique des commits, car nous avons travaillé de manière synchronisée sur nos environnements de développement respectifs.
+
+
 ### Objectif du Projet
 
 L'objectif principal était d'appliquer les connaissances acquises tout au long de notre parcours universitaire en intégrant les différentes notions enseignées dans le cadre de notre cours. 
+
 
 ## Description du Projet
 

@@ -1,0 +1,131 @@
+<router-outlet></router-outlet>
+<app-header></app-header>
+
+<div class="container-fluid mb-5">
+  <div class="row mb-5">
+    <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-5">
+      <div class="nga-card">
+        <h1 class="h4 card-header text-center py-4">
+          <strong>Edition du portfolio</strong>
+        </h1>
+        <div class="card-body px-lg-5 pt-4">
+          <form [formGroup]="portfolioForm" (ngSubmit)="portfolio()">
+            <div class="form-row">
+              <div class="col">
+                <div class="md-form mb-2">
+                  <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm" formControlName="titre" id="titre"
+                      placeholder="" />
+                    <label for="floatingInput">Titre</label>
+                  </div>
+                </div>
+
+                <div class="md-form mb-3">
+                  <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm" formControlName="contenu" id="contenu"
+                      placeholder="" />
+                    <label for="floatingInput">Contenu</label>
+                  </div>
+                </div>
+
+
+                <div class="md-form mb-4" formArrayName="formations">
+                  <div class="text-center py-3">
+                    <button type="button" (click)="addFormation()" class="btn btn-secondary">Ajouter Formation</button>
+                  </div>
+
+                  <div class="form-row" *ngFor="let formation of formations().controls; let i=index" [formGroupName]="i">
+                    <div class="input-group mb-2">
+                      <button (click)="removeFormation(i)" class="btn btn-secondary" type="button">-</button>
+                      <input type="text" class="form-control form-control-sm" formControlName="nom" placeholder="" id="formation_{{i}}" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="md-form mb-4" formArrayName="experiences">
+                  <div class="text-center py-3">
+                    <button type="button" (click)="addExperience()" class="btn btn-secondary">Ajouter Experience</button>
+                  </div>
+
+                  <div class="form-row" *ngFor="let experience of experiences().controls; let i=index" [formGroupName]="i">
+                    <div class="input-group mb-2">
+                      <button (click)="removeExperience(i)" class="btn btn-secondary" type="button">-</button>
+                      <input type="text" class="form-control form-control-sm" formControlName="nom" placeholder="" id="experience_{{i}}" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- même chose avec "projet" -->
+
+                <div class="md-form mb-4" formArrayName="projets">
+                  <div class="text-center py-3">
+                    <button type="button" (click)="addProjet()" class="btn btn-secondary">Ajouter Projet</button>
+                  </div>
+
+                  <div class="form-row" *ngFor="let projet of projets().controls; let i=index" [formGroupName]="i">
+                    <div class="input-group mb-2">
+                      <button (click)="removeProjet(i)" class="btn btn-secondary" type="button">-</button>
+                      <input type="text" class="form-control form-control-sm" formControlName="nom" placeholder="" id="projet_{{i}}" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- même chose avec langue -->
+
+                <div class="md-form mb-4" formArrayName="langues">
+                  <div class="text-center py-3">
+                    <button type="button" (click)="addLangue()" class="btn btn-secondary">Ajouter Langue</button>
+                  </div>
+
+                  <div class="form-row" *ngFor="let langue of langues().controls; let i=index" [formGroupName]="i">
+                    <div class="input-group mb-2">
+                      <button (click)="removeLangue(i)" class="btn btn-secondary" type="button">-</button>
+                      <input type="text" class="form-control form-control-sm" formControlName="nom" placeholder="" id="langue_{{i}}" />
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <div class="md-form mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" formControlName="public" id="public" />
+                    <label class="form-check-label" for="public">
+                      Public
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="w-100 nga-btn nga-btn-primary mb-4"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="Données enregistrées !">
+                  Confirmer
+              </button>
+                <hr />
+              </div>
+            </div>
+          </form>
+
+          
+            <div class="form-row">
+              <div class="col">
+                <div class="md-form mb-2">
+                  <div class="form-floating">
+                    <input type="file" class="form-control form-control-sm" formControlName="image" id="image"
+                      (change)="handleFileInput($event.target)" placeholder="" />
+                  </div>
+                </div>
+
+                <button class="w-100 nga-btn nga-btn-primary mb-4" (click)="image()" routerLink="/">
+                  Confirmer
+                </button>
+                <hr />
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

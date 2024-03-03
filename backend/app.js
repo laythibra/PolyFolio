@@ -3,6 +3,9 @@ const app = express();
 const authRoutes = require('./routes/auth');
 const protectedRoute = require('./routes/protectedRoute');
 const portfolioRoute = require('./routes/portfolio');
+const db = require('./db');
+const verifyToken = require("./middleware/authMiddleware");
+
 
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
@@ -34,13 +37,26 @@ app.listen(PORT, () => {
 //https://expressjs.com/en/starter/static-files.html
 const upload = require('./middleware/upload');
 
-app.post("/upload", upload.single("file"), (req, res) => {
+app.post("/upload", verifyToken, upload.single("file"), async (req, res) => {
+
+    if (req.file == undefined) {
+        return res.status(400).json({ error: 'No file uploaded' });
+    }
+    id = req.body.id;
+    portfolio = await db.one('SELECT * FROM portfolio WHERE id = ${id}', {
+        id: id
+    }).catch((error) => {
+        console.log('ERROR:', error)
+    })
+
+    console.log(portfolio.user_id);
+    console.log(req.id);
 
     if (portfolio.user_id != req.id || req.id == undefined) {
         return res.status(403).json({ error: 'Non autorisé' });
     }
 
-    db.none('UPDATE portfolio SET image = ${image} WHERE id = ${id}', {
+    db.none('UPDATE portfolio SET image_nom = ${image} WHERE id = ${id}', {
         image: req.file.filename,
         id: id
     })

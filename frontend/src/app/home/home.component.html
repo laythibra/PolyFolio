@@ -17,6 +17,12 @@
     reflète qui vous êtes vraiment.
   </p>
   <div *ngIf="connecte; else elseBlock">
+    <img
+      src="./../../assets/portfolio.png"
+      width="1500"
+    />
+    <br />
+    <br />
     <button
       class="btn btn-nga btn-nga-primary mb-4"
       style="font-weight: bold"
@@ -30,7 +36,6 @@
   <ng-template #elseBlock>
     <img
       src="./../../assets/portfolio.png"
-      alt="Description de l'image"
       width="1500"
     />
     <br />
@@ -53,7 +58,7 @@
         <div class="card shadow-sm">
           <svg
             style="
-              background-image: url('https://neoresid-prod.s3.amazonaws.com/media/articles/1580585802565.jpg');
+              background-image: url('{{ url + portfolio.image_nom }}');
               background-repeat: no-repeat;
               background-size: cover;
             "

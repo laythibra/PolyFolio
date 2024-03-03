@@ -1,0 +1,97 @@
+<router-outlet></router-outlet>
+<app-header></app-header>
+
+<!-- Font Awesome CSS -->
+
+<!-- Custom CSS -->
+<style>
+  /* Ajoutez vos styles personnalisés ici */
+  /* Par exemple : */
+  /* .container {
+    background-color: #212529;
+    color: #fff; 
+  }
+  .section-title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .section-content {
+    margin-bottom: 50px;
+  }*/
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: 3px;
+  }
+</style>
+
+<div class="container text-body rounded bg-light mt-5 py-4 px-4">
+  <!-- En-tête -->
+  <header class="text-center my-5">
+    <h1>{{ titre }}</h1>
+  </header>
+
+  <div class="row align-items-start">
+    <div class="col">
+
+    <!-- Présentation professionnelle -->
+    <section class="pt-4 section-content">
+      <h2 class="section-title">
+        <i class="fas fa-user icon"></i>Présentation professionnelle
+      </h2>
+      <p>{{ contenu }}</p>
+    </section>
+
+    <!-- Formation -->
+    <section class="pt-4 section-content">
+      <h2 class="section-title">
+        <i class="fas fa-graduation-cap icon"></i>Formations
+      </h2>
+      <ul>
+        <li *ngFor="let formation of formations">{{ formation }}</li>
+      </ul>
+    </section>
+
+    <!-- Expérience -->
+    <section class="pt-4 section-content">
+      <h2 class="section-title">
+        <i class="fas fa-briefcase icon"></i>Expériences
+      </h2>
+      <ul>
+        <li *ngFor="let experience of experiences">{{ experience }}</li>
+      </ul>
+    </section>
+
+    <!-- Projets -->
+    <section class="pt-4 section-content">
+      <h2 class="section-title">
+        <i class="fas fa-project-diagram icon"></i>Projets
+      </h2>
+      <ul>
+        <li *ngFor="let projet of projets">{{ projet }}</li>
+      </ul>
+    </section>
+
+    <!-- Langues -->
+    <section class="pt-4 section-content">
+      <h2 class="section-title"><i class="fas fa-language icon"></i>Langues</h2>
+      <ul>
+        <li *ngFor="let langue of langues">{{ langue }}</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="col">
+    <img src={{url}} style="width: 200px;"/>
+
+  </div>
+</div>
+
+  <!-- Autres sections -->
+  <!-- Ajoutez d'autres sections selon vos besoins -->
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

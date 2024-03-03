@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule} from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [HeaderModule, RouterOutlet, RouterModule, ReactiveFormsModule],
+  imports: [HeaderModule, RouterOutlet, RouterModule, ReactiveFormsModule, CommonModule],
   templateUrl: './portfolio_view.component.html',
   styleUrl: './portfolio_view.component.css'
 })
@@ -20,10 +21,11 @@ export class PortfolioViewComponent {
 
   titre: String = ""
   contenu: String = ""
-  formation: String = ""
-  experience: String = ""
-  langue: String = ""
-  projet: String = ""
+  formations: String[] = []
+  experiences: String[] = []
+  projets: String[] = []
+  langues: String[] = []
+  url: String = "http://localhost:3000/static/"
 
 
 
@@ -36,6 +38,18 @@ export class PortfolioViewComponent {
     this.route.queryParams.subscribe(params => {
       this.id = params['id'];
     });
+
+    // this.titre = "TITRE"
+    // this.contenu = "Contenu du portfolio blabla lorem lipsum";
+
+
+    // // génère du placeholder pour les formations, expériences, projets et langues
+    // this.formations = ["Formation 1", "Formation 2", "Formation 3"];
+    // this.experiences = ["Experience 1", "Experience 2", "Experience 3"];
+    // this.projets = ["Projet 1", "Projet 2", "Projet 3"];
+    // this.langues = ["Langue 1", "Langue 2", "Langue 3"];
+    // this.url = "https://www.univ-angers.fr/skins/UnivAngers-v2/resources/img/logo-header-blanc-bleu.png"
+
 
     fetch('http://localhost:3000/portfolio/' + this.id, {
       method: 'GET',
@@ -53,11 +67,14 @@ export class PortfolioViewComponent {
       })
       .then((data) => {
         this.titre = data.titre,
-        this.contenu = data.contenu,
-        this.formation = data.formation,
-        this.projet = data.projet,
-        this.langue = data.langue,
-        this.experience = data.experience
+        this.contenu = data.contenu
+        this.url += data.image_nom
+
+        //formations sont des strings séparées par des ;, on les transforme en tableau
+        this.formations = data.formation.split(';');
+        this.experiences = data.experience.split(';');
+        this.projets = data.projet.split(';');
+        this.langues = data.langue.split(';');
       })
       .catch((error) => {
         console.error('Error:', error);

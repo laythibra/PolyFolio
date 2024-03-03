@@ -25,5 +25,10 @@ export const routes: Routes = [
   {path: 'view',
     loadChildren: () => import('./portfolio_view/portfolio_view.module')
       .then(mod => mod.PorfolioViewModule)
-  }
+  },
+  {path: 'contact',
+  loadChildren: () => import('./contact/contact.module')
+    .then(mod => mod.ContactModule)
+},
+
 ];

@@ -18,6 +18,7 @@ export class HomeComponent {
 
   connecte = localStorage.getItem('token') !== null;
   portfolios: any = [];
+  url: string = 'http://localhost:3000/static/';
 
   // au démarrage de la page, fetch localhost:3000/portfolio/user/<id> avec le token dans le header
   ngOnInit() {

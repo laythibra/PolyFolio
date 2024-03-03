@@ -15,10 +15,11 @@ CREATE TABLE portfolio(
 id SERIAL PRIMARY KEY,
 public boolean DEFAULT false,
 user_id integer,
-titre varchar(32),
-contenu varchar(32), 
-fromation varchar(32), 
-experience varchar(32), 
-langue varchar(32), 
-projet varchar(32)
+image_nom varchar(1024),
+titre varchar(1024),
+contenu varchar(1024), 
+formation varchar(1024), 
+experience varchar(1024), 
+langue varchar(1024), 
+projet varchar(1024)
 );

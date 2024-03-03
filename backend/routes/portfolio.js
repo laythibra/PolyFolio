@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const verifyToken = require("../middleware/authMiddleware");
 const db = require("../db");
+const jwt = require("jsonwebtoken");
 
 // Création d'un portofolio
 router.post("/creer", verifyToken, async (req, res) => {
@@ -20,9 +21,9 @@ router.post("/creer", verifyToken, async (req, res) => {
         user_id: user_id,
         titre: "Votre titre",
         contenu: "Votre contenu",
-        formation: "Vos formation",
-        experience: "Vos expérience",
-        projet: "Vos projet",
+        formation: "Vos formations",
+        experience: "Vos expériences",
+        projet: "Vos projets",
         langue: "Vos langues",
       }
     )
@@ -76,6 +77,7 @@ router.get("/:id", async (req, res) => {
       const decoded = jwt.verify(token, "your-secret-key");
       req.id = decoded.id;
     } catch (error) {
+      console.log(error)
       return res.status(401).json({ error: "Invalid token" });
     }
 
